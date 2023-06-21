@@ -2,3 +2,20 @@
   width: 100%;
   height: 100%;
 }
+
+.wraper {
+}
+
+.player {
+  width: 72px;
+  height: 72px;
+  background-image: url(../../assets/player.png);
+  background-color: transparent;
+  border: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
