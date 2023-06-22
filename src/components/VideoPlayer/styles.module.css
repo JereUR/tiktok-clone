@@ -3,7 +3,8 @@
   height: 100%;
 }
 
-.wraper {
+.wrapper {
+  position: relative;
 }
 
 .player {
@@ -18,4 +19,8 @@
   position: absolute;
   inset: 0;
   margin: auto;
+}
+
+.hidden {
+  opacity: 0;
 }
