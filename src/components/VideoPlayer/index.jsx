@@ -2,6 +2,7 @@ import styles from './styles.module.css'
 import clsx from 'clsx'
 
 import { useState, useRef } from 'react'
+import VideoPlayerActions from './VideoPlayerActions'
 
 export default function VideoPlayer({ src }) {
   const [playing, setPlaying] = useState(false)
@@ -20,13 +21,14 @@ export default function VideoPlayer({ src }) {
     <div className={styles.wrapper}>
       <video
         className={styles.video}
-        src={src}
-        loop
         controls={false}
-        ref={video}
+        loop
         onClick={handlePlay}
+        ref={video}
+        src={src}
       />
       <i className={playerClassName} />
+      <VideoPlayerActions />
     </div>
   )
 }

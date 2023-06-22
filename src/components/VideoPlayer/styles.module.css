@@ -1,6 +1,6 @@
 .video {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .wrapper {
@@ -8,19 +8,33 @@
 }
 
 .player {
-  width: 72px;
-  height: 72px;
-  background-image: url(../../assets/player.png);
   background-color: transparent;
-  border: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: url(../../assets/player.png);
   background-position: center center;
-  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+  height: 72px;
   inset: 0;
   margin: auto;
+  position: absolute;
+  width: 72px;
 }
 
 .hidden {
   opacity: 0;
+}
+
+.actions {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+.action {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
