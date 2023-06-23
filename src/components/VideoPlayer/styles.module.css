@@ -29,12 +29,15 @@
   position: absolute;
   bottom: 120px;
   right: 16px;
+  z-index: 1;
 }
 
 .action {
+  align-items: center;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 15px;
+  text-align: center;
 }
