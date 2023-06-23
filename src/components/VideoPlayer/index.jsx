@@ -27,7 +27,7 @@ export default function VideoPlayer({ src }) {
         ref={video}
         src={src}
       />
-      <i className={playerClassName} />
+      <i className={playerClassName} onClick={handlePlay} />
       <VideoPlayerActions />
     </div>
   )
