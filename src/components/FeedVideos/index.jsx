@@ -5,7 +5,8 @@ const VIDEOS = [
   {
     id: 1,
     author: 'elchamoy_v',
-    description: 'Diamantes pal frii🤣 ',
+    description:
+      'Diamantes pal frii🤣 #Parati #Ala #VengaPaCa #FreeFire #Diamantes',
     likes: 123,
     shares: 213,
     comments: 34,
@@ -17,7 +18,7 @@ const VIDEOS = [
   {
     id: 2,
     author: 'Crazy goat',
-    description: 'Beeeeeeeeee',
+    description: 'Beeeeeeeeee #GOAT #Beeeee #LOL #Funny #Cute',
     likes: 198,
     shares: 2313,
     comments: 794,
