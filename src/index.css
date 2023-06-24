@@ -10,21 +10,17 @@
   src: url('assets/Proxima-Nova-Semibold.woff2') format('woff2');
 }
 
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url('assets/Proxima-Nova-Bold.woff2') format('woff2');
-  font-weight: 700;
-}
-
 body {
   margin: 0;
-  font-family: 'Proxima Nova', Arial, Tahoma, PingFangSC, sans-serif;
+  font-family: 'Proxima Nova', Arial, Tahoma, PingFangSC, sans-serif,
+    'Segoe UI Emoji', 'Noto Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 html {
   box-sizing: border-box;
+  margin: 0;
 }
 
 *,
