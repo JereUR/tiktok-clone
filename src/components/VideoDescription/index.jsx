@@ -12,13 +12,17 @@ export default function VideoDescription({
   return (
     <footer className={styles.description}>
       <div className={styles.textWrapper}>
-        <strong>
-          <a className={styles.author} href={`/user/${author}`}>
-            {author}
-          </a>
-        </strong>
-        <p className={styles.text}>{description}</p>
-        <SongTicker songTitle={songTitle} />
+        <section>
+          <strong>
+            <a className={styles.author} href={`/user/${author}`}>
+              {author}
+            </a>
+          </strong>
+        </section>
+        <section>
+          <p className={styles.text}>{description}</p>
+          <SongTicker songTitle={songTitle} />
+        </section>
       </div>
       <div>
         <AlbumDisk albumCover={albumCover} />
