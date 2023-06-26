@@ -5,7 +5,13 @@ import { useState, useRef } from 'react'
 import VideoPlayerActions from './VideoPlayerActions'
 import VideoDescription from '../VideoDescription'
 
-export default function VideoPlayer({ albumCover, author, description, src }) {
+export default function VideoPlayer({
+  albumCover,
+  author,
+  description,
+  src,
+  songTitle
+}) {
   const [playing, setPlaying] = useState(false)
   const video = useRef(null)
 
@@ -34,6 +40,7 @@ export default function VideoPlayer({ albumCover, author, description, src }) {
         albumCover={albumCover}
         author={author}
         description={description}
+        songTitle={songTitle}
       />
     </div>
   )
