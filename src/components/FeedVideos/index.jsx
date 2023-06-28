@@ -1,5 +1,8 @@
+import { useEffect } from 'react'
 import VideoPlayer from '../VideoPlayer'
 import styles from './styles.module.css'
+import { getVideos } from '../../services'
+import { useState } from 'react'
 
 const VIDEOS = [
   {
@@ -43,6 +46,12 @@ const VIDEOS = [
 ]
 
 export default function FeedVideos() {
+  useEffect(() => {
+    getVideos().then(([error, videos]) => {
+      console.log({ error, videos })
+    })
+  }, [])
+
   return VIDEOS.map((video) => {
     return (
       <div className={styles.item} key={video.id}>
