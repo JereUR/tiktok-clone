@@ -1,12 +1,14 @@
 import { supabase } from './supabase'
 
 export const getVideos = async () => {
-  const { data: videos, error } = await supabase.from('videos').select(`
+  const { data, error } = await supabase.from('videos').select(`
     *,
-    users (
-      username
+    user:user_id (
+      avatar,
+      username,
+      id
     )
   `)
 
-  return [error, videos]
+  return [error, data]
 }
