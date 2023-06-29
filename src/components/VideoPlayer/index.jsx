@@ -7,7 +7,8 @@ import VideoDescription from '../VideoDescription'
 
 export default function VideoPlayer({
   albumCover,
-  author,
+  username,
+  avatar,
   description,
   src,
   songTitle
@@ -35,10 +36,10 @@ export default function VideoPlayer({
         src={src}
       />
       <i className={playerClassName} onClick={handlePlay} />
-      <VideoPlayerActions />
+      <VideoPlayerActions username={username} avatar={avatar} />
       <VideoDescription
         albumCover={albumCover}
-        author={author}
+        username={username}
         description={description}
         songTitle={songTitle}
       />
