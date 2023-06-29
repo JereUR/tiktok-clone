@@ -41,4 +41,25 @@
   justify-content: center;
   margin-bottom: 15px;
   text-align: center;
+  background: transparent;
+  border: 0;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user img:first-child {
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+}
+
+.user img:last-child {
+  height: 27px;
+  width: 27px;
+  margin-top: -13px;
 }
