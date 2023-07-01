@@ -33,6 +33,7 @@
   align-items: center;
   padding: 36px;
   aspect-ratio: 9/16;
+  transition: background-color 0.3s ease;
 }
 
 .dnd h4 {
@@ -49,4 +50,12 @@
 
 .dnd img {
   margin-bottom: 24px;
+}
+
+.dndAccept {
+  background-color: rgb(221, 255, 202);
+}
+
+.dndReject {
+  background-color: rgb(255, 202, 202);
 }
