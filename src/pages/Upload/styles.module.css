@@ -14,9 +14,22 @@
   flex-direction: column;
 }
 
+.upload input {
+  display: block;
+  padding: 4px;
+  line-height: 18px;
+  border: 2px;
+  border: 1px solid #ccc;
+  margin-top: 14px;
+  font-size: 400;
+  width: 100%;
+}
+
 .upload label {
   display: block;
   margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .upload form > * {
