@@ -1,6 +1,6 @@
 import { useDropzone } from 'react-dropzone'
 import styles from './styles.module.css'
-import { useCallback, useEffect } from 'react'
+import { useEffect } from 'react'
 import clsx from 'clsx'
 
 export default function Upload() {
