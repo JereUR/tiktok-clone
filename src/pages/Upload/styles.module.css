@@ -58,4 +58,39 @@
 
 .dndReject {
   background-color: rgb(255, 202, 202);
+  animation: shake 0.4s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate3d(-1px, 1px, 0) rotate(1deg);
+  }
+
+  15% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  30% {
+    transform: translate3d(1px, 1px, 0) rotate(-1deg);
+  }
+
+  45% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  60% {
+    transform: translate3d(-1px, -1px, 0) rotate(1deg);
+  }
+
+  75% {
+    transform: translate(0, 0, 0) rotate(0deg);
+  }
+
+  90% {
+    transform: translate(1px, 1px, 0) rotate(-1deg);
+  }
+
+  100% {
+    transform: translate(0, 0, 0) rotate(0deg);
+  }
 }
