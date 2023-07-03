@@ -4,6 +4,8 @@ export const uploadVideo = async ({ videoFile }) => {
   const { data, error } = await supabase.storage
     .from('videos')
     .upload('videos/', videoFile)
+
+  return [error, data]
 }
 
 export const getVideos = async () => {
