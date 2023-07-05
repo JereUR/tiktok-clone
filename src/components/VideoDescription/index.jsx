@@ -1,3 +1,4 @@
+import NavBar from '../NavBar'
 import SongTicker from '../SongTicker'
 import AlbumDisk from './AlbumDisk'
 import styles from './styles.module.css'
@@ -24,7 +25,10 @@ export default function VideoDescription({
         </section>
       </div>
       <div>
-        <AlbumDisk albumCover={albumCover} />
+        <AlbumDisk albumCover={albumCover} className={styles.disk} />
+      </div>
+      <div className={styles.addVideo}>
+        <NavBar />
       </div>
     </footer>
   )

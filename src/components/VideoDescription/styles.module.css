@@ -26,6 +26,7 @@
   bottom: 0;
   color: #fff;
   display: flex;
+  flex-wrap: wrap;
   font-size: 13px;
   justify-content: space-between;
   padding: 30px 20px 20px;
@@ -48,8 +49,24 @@
 }
 
 .textWrapper {
+  flex: 1 0 33.33%;
   max-width: 275px;
   padding-right: 32px;
+}
+
+.disk {
+  flex: 1 0 33.33%;
+}
+
+.addVideo {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.addVideo svg {
+  width: 90px;
+  background: transparent;
 }
 
 @keyframes rotate {
