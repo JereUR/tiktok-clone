@@ -8,13 +8,18 @@ import { publishVideo, uploadVideo } from '../../services'
 export default function Upload() {
   const [uploading, setUploading] = useState(false)
   const [uploaded, setUploaded] = useState(null)
+  const [errorVideo, setErrorVideo] = useState(null)
+  const [errorForm, setErrorForm] = useState(null)
 
   const onDrop = async (files) => {
     const [file] = files
     setUploading(true)
     const [error, fileUrl] = await uploadVideo({ videoFile: file })
-    if (error) return console.error(error)
-    setUploaded(fileUrl)
+    if (error) {
+      setErrorVideo(error)
+    } else {
+      setUploaded(fileUrl)
+    }
   }
 
   const { isDragAccept, isDragReject, getRootProps, getInputProps } =
@@ -62,14 +67,30 @@ export default function Upload() {
     const description = e.target.description.value
 
     const [error] = await publishVideo({ videoSrc: uploaded, description })
-    if (error) return console.error(error)
-    else console.log('Video published!!!')
+    if (error) {
+      setErrorForm(error)
+    } else {
+      window.location.replace('/')
+    }
+  }
+
+  const handleRetry = () => {
+    setUploaded(null)
+    setUploading(false)
+    setErrorVideo(null)
   }
 
   return (
     <div className={styles.upload}>
+      <button onClick={() => window.location.replace('/')}>Volver</button>
       <h1>Cargar video</h1>
       <p>Este video se publicará en el perfil de JereIDC</p>
+      {errorVideo && (
+        <div>
+          <h4 className={styles.error}>{errorVideo.message}</h4>
+          <button onClick={handleRetry}>Intentar nuevamente</button>
+        </div>
+      )}
 
       <form className={styles.form} onSubmit={handleSubmit}>
         <div {...getRootProps()}>
@@ -86,7 +107,8 @@ export default function Upload() {
           leyenda
           <input name="description" placeholder="" />
         </label>
-        <button> Publicar</button>
+        <button disabled={errorVideo && true}> Publicar</button>
+        {errorForm && <h4 className={styles.error}>{errorForm.message}</h4>}
       </form>
     </div>
   )
